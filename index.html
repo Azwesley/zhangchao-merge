@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e3"><meta name="description" content="三国英雄，碰一下就升级！从小兵一路合成终极大人物张超。免费、免下载，打开就玩。">
+<meta property="og:title" content="合成张超 · 三国合成志"><meta property="og:description" content="天下英雄，终归张超。来试试你能合到谁！">
+<title>合成张超 · 三国合成志</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261018-1">
+<script defer src="vendor/matter.min.js"></script><script defer src="characters.js?v=20261018-1"></script><script defer src="engine.js?v=20261018-1"></script><script defer src="app.js?v=20261018-1"></script>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="./" aria-label="合成张超首页"><span class="seal">合</span><span>三国合成志<small>THREE KINGDOMS · MERGE</small></span></a><button class="text-button" id="help-button" aria-label="查看玩法">怎么玩 <span>?</span></button></header>
+<main class="layout">
+<aside class="intro"><div class="eyebrow"><span></span> 一局三分钟，英雄碰个头</div><h1>天下英雄，<br>终归<span>张超。</span></h1><p>从无名小兵，到三国名将。<br>轻轻一放，让相同的英雄相遇。</p><div class="emperor-art"><div class="halo-text">终 · 极 · 传 · 说</div><img src="assets/hero-10.svg" alt="终极人物张超"><span class="emperor-stamp">超<br>神</span></div><p class="intro-foot">无须下载 · 即点即玩 · 快乐加倍</p></aside>
+<section class="game-shell" aria-label="合成张超游戏">
+<div class="game-heading"><div><span class="eyebrow">三国名将，一路合到顶</span><h1>合成<span>张超</span><b>!</b></h1></div><div class="best"><span>个人最高</span><strong id="best-score">0</strong></div></div>
+<div class="scorebar"><div class="score-main"><span>本局得分</span><strong id="score" aria-live="polite">0</strong><span id="score-gain"></span></div><div class="next"><span>下一位</span><img id="next-image" src="assets/hero-0.svg" alt="小兵"><b id="next-name">小兵</b></div></div>
+<div id="challenge" class="challenge" hidden></div>
+<div class="board-wrap"><div class="board-corner corner-left"></div><div class="board-corner corner-right"></div><canvas id="game" width="400" height="530" tabindex="0" role="application" aria-label="合成棋盘。点击位置投放人物，或用左右方向键移动、空格投放。"></canvas><div class="drop-tip" id="drop-tip">左右移动瞄准 · 松手放下英雄</div><div class="merge-announcement" id="announcement" aria-live="polite"></div><div class="danger-message" id="danger-message" hidden>英雄快满了！赶快合成</div><div class="board-footer"><span id="current-name">待上场 · 小兵</span><span id="highest-name">目标 · 张超</span></div></div>
+<div class="tools"><button id="rescue-button" title="每局一次，移走场上最小的三位英雄"><span class="tool-icon">✦</span><span>借东风<small id="rescue-count">清场一次</small></span></button><button id="sound-button" aria-pressed="false"><span class="tool-icon sound-icon">♫</span><span>音效<small id="sound-state">已关闭</small></span></button><button id="restart-button"><span class="tool-icon">↻</span><span>再开一局<small>重新挑战</small></span></button><button id="share-button"><span class="tool-icon">↗</span><span>邀友来战<small>复制网址</small></span></button></div>
+<div class="mobile-progress"><span>合成路线</span><div id="mini-lineup"></div><button id="lineup-button">图鉴 ›</button></div>
+<p class="game-foot" id="game-status">相同英雄碰撞升级 · 堆过红线持续 2 秒结束</p>
+</section>
+<aside class="guide"><div class="guide-top"><span class="eyebrow">英雄进阶录</span><h2>下一个，会是谁？</h2><p>两位相同英雄，合成一位新英雄。</p></div><div class="lineup" id="lineup"></div><div class="guide-note"><span>锦囊 · 01</span><p>大人物放两边，<br>给小英雄留点相遇的空间。</p></div></aside>
+</main>
+<footer class="page-foot"><span>三国人物，趣味演绎</span><span>合到张超，才算英雄。</span></footer>
+<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button id="dialog-close" class="dialog-close" aria-label="关闭弹窗">×</button><div id="dialog-art"></div><p id="dialog-eyebrow" class="eyebrow"></p><h2 id="dialog-title"></h2><div id="dialog-content"></div><div id="dialog-actions"></div></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<noscript>请在浏览器中启用 JavaScript，即可游玩合成张超。</noscript>
+</body></html>
